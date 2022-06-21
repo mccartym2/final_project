@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: Run tests
-        run: bundle exec rack-test
+        run: bundle exec rspec
 
   linter:
     runs-on: ubuntu-latest
