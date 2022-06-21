@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'support', 'paths'))
@@ -35,7 +37,7 @@ Then(/^the word should read "(.*)"$/) do |word|
 end
 
 Then(/^the server should(.not)? respond with status (\d+)$/) do |see, status|
-  if see and see.strip == 'not'
+  if see && (see.strip == 'not')
     page.status_code.should_not eql(status.to_i)
   else
     page.status_code.should eql(status.to_i)

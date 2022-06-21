@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WordGuesserGame
   attr_accessor :word, :guesses, :wrong_guesses
 
