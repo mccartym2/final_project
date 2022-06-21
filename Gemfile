@@ -24,4 +24,6 @@ group :development, :test do
   gem 'ZenTest', '4.11.2'
 
   gem 'rubocop', require: false
+
+  gem "rake"
 end
