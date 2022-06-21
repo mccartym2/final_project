@@ -25,7 +25,5 @@ group :development, :test do
   gem 'webmock', '3.3.0'
   gem 'ZenTest', '4.11.2'
 
-  gem 'rubocop', require: false
-
-  gem 'rake'
+  gem 'rubocop', '1.30.0'
 end
