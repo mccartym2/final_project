@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'wordguesser_game'
 
@@ -10,7 +12,7 @@ describe WordGuesserGame do
   end
 
   describe 'new' do
-    it "takes a parameter and returns a WordGuesserGame object" do      
+    it 'takes a parameter and returns a WordGuesserGame object' do
       @game = WordGuesserGame.new('glorp')
       expect(@game).to be_an_instance_of(WordGuesserGame)
       expect(@game.word).to eq('glorp')
@@ -30,7 +32,7 @@ describe WordGuesserGame do
         expect(@game.wrong_guesses).to eq('')
       end
       it 'returns true' do
-        expect(@valid).not_to be false 
+        expect(@valid).not_to be false
       end
     end
     context 'incorrectly' do
@@ -92,7 +94,7 @@ describe WordGuesserGame do
     end
     # for a given set of guesses, what should the word look like?
     @test_cases = {
-      'bn' =>  'b-n-n-',
+      'bn' => 'b-n-n-',
       'def' => '------',
       'ban' => 'banana'
     }
@@ -105,7 +107,7 @@ describe WordGuesserGame do
   end
 
   describe 'game status' do
-    before :each do 
+    before :each do
       @game = WordGuesserGame.new('dog')
     end
     it 'should be win when all letters guessed' do

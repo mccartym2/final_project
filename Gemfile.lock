@@ -144,7 +144,7 @@ DEPENDENCIES
   rerun (= 0.10.0)
   rspec (= 3.3.0)
   rspec-autotest (= 1.0.0)
-  rubocop
+  rubocop (= 1.30.0)
   simplecov (= 0.16.1)
   sinatra (>= 2.0.2)
   sinatra-flash (= 0.3.0)
