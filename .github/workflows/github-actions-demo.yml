@@ -15,7 +15,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  test:
+  unit-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,6 +27,19 @@ jobs:
         run: bundle install
       - name: Run tests
         run: bundle exec rspec
+
+    acceptance-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
+        with:
+          ruby-version: 2.6.6
+      - name: Install dependencies
+        run: bundle install
+      - name: Run tests
+        run: bundle exec cucumber
 
   linter:
     runs-on: ubuntu-latest
